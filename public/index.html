@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Selection</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center-container">
+        <button id="userButton" class="selection-button">User</button>
+        <button id="adminButton" class="selection-button">Admin</button>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <div id="userLoginForm" class="login-form">
+        <h2>User Login</h2>
+        <form id="userForm"  method="POST">
+            <div class="input-group">
+                <label for="usernameUser">Username</label>
+                <input type="text" id="usernameUser" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="passwordUser">Password</label>
+                <input type="password" id="passwordUser" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="securityCode">securityCode</label>
+                <input type="password" id="securityCode" name="securityCode" required>
+            </div>
+            <button type="submit" id="userLogin">Login</button>
+        </form>
+        <button id="registerButton" class="register-button">Register</button>
+    </div>
+    
+
+    <div id="adminLoginForm" class="login-form">
+        <h2>Admin Login</h2>
+        <form id="adminForm"  method="POST">
+            <div class="input-group">
+                <label for="usernameAdmin">Username</label>
+                <input type="text" id="usernameAdmin" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="passwordAdmin">Password</label>
+                <input type="password" id="passwordAdmin" name="password" required>
+            </div>
+            <button type="submit" id="adminLogin">Login</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

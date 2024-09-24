@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefits Table</title>
+    <link rel="stylesheet" href="userLogin.css">
+</head>
+<header>
+    <h1>Welcome</h1>
+    <button id="addButton" onclick="showPopup()">add</button>
+</header>
+<body>
+    
+    <table id="userBenefitTable">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>benefit name</th>
+                <th>description</th>
+                <th>eligibility criteria</th>
+                <th>coverage amount</th>
+                <th>start date</th>
+                <th>end date</th>
+                
+            </tr>
+    </table>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="popup-form" id="popupForm">
+
+        <h3>Add Benefit</h3><buttton id="cross">x</button>
+        <table id="btable">
+            
+        </table>
+    </div>
+
+    <script src="userLogin.js"></script>
+</body>
+</html>

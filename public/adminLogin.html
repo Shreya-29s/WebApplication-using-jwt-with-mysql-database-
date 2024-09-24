@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="adminLogin.css" rel="stylesheet">
+    <title>Admin Page</title>
+</head>
+<header>
+    <h1>Admin Page</h1>
+    <span id="addbutton">
+        <button id="addB" onclick="addBenefit()">Add</button>
+        <button id="requestA" onclick="showRequest()">Requests</button>
+    </span>
+</header>
+
+<body>
+    <div>
+        <h1>Users and Admins</h1>
+        <div id="usersContainer">
+            <!-- Example user list -->
+            <div class="user" onclick="showUserDetails('user1')">User1</div>
+            <div class="user" onclick="showUserDetails('user2')">User2</div>
+        </div>
+    </div>
+
+    <!-- User Details Table -->
+    <div id="userDetailsContainer" style="display: none;">
+        <h2>User Details</h2>
+        
+    </div>
+
+    <div>
+        <h1>Benefits</h1>
+    </div>
+    <table id="tableBenefits">
+        <tr id="headers">
+            <th>Benefit_Id</th>
+            <th>Benefit_Name</th>
+            <th>Description</th>
+            <th>Eligibility_Criteria</th>
+            <th>Coverage_Amount</th>
+            <th>Start_Date</th>
+            <th>End_Date</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+    
+    <div class="popup-overlay"></div>
+    <div class="popup" id="addBenefit">
+        <h2>Add Benefit</h2>
+        <button id="cross">X</button>
+        <form>
+            <label>Benefit Name</label><br><br>
+            <input type="text" id="benefitName" placeholder="Name"><br><br>
+            <label>Description</label><br><br>
+            <input type="text" id="Description" placeholder="Description"><br><br>
+            <label>Eligibility_Criteria</label><br><br>
+            <input type="text" id="Eligibility_Criteria" placeholder="Eligibility_Criteria"><br><br>
+            <label>Coverage_Amount</label><br><br>
+            <input type="text" id="Coverage_Amount" placeholder="Coverage_Amount"><br><br>
+            <label>Start_Date</label><br><br>
+            <input type="text" id="Start_Date" placeholder="Start_Date"><br><br>
+            <label>End_Date</label><br><br>
+            <input type="text" id="End_Date" placeholder="End_Date"><br><br>
+            <button class="button" id="addSubmit">Submit</button>
+        </form>
+    </div>
+   
+    <div class="popup" id="updateBenefit">
+        <h2>Update Benefit</h2>
+        <button id="Ucross">X</button>
+        <form>
+            <label>Benefit Name</label><br><br>
+            <input type="text" id="UbenefitName" placeholder="Name"><br><br>
+            <label>Description</label><br><br>
+            <input type="text" id="UDescription" placeholder="Description"><br><br>
+            <label>Eligibility_Criteria</label><br><br>
+            <input type="text" id="UEligibility_Criteria" placeholder="Eligibility_Criteria"><br><br>
+            <label>Coverage_Amount</label><br><br>
+            <input type="text" id="UCoverage_Amount" placeholder="Coverage_Amount"><br><br>
+            <label>Start_Date</label><br><br>
+            <input type="text" id="UStart_Date" placeholder="Start_Date"><br><br>
+            <label>End_Date</label><br><br>
+            <input type="text" id="UEnd_Date" placeholder="End_Date"><br><br>
+            <button class="button" id="updateSubmit">Update</button>
+        </form>
+    </div>
+    <div class="popup" id="requestP">
+        <button id="Rcross">X</button>
+        <h2>Pending Benefits Requests</h2>
+        
+        <table id="Brequest">
+            <td>RequestId</td>
+            <td>UserId</td>
+            <td>BenefitId</td>
+            <td>Status</td>
+            <td>Action</td>
+        </table>
+        <h2>Pending User Requests</h2>
+        
+        <table id="Urequest">
+            <td>RequestId</td>
+            <td>UserId</td>
+            <td>SecurityCode/td>
+            <td>Status</td>
+            <td>Action</td>
+        </table>
+        </div>
+
+    <script src="adminLogin.js"></script>
+</body>
+</html>
